@@ -16,7 +16,7 @@ function eventListeners() {
 
   document.addEventListener("mousemove", (e) => {
     if (isSidebarHidden) {
-      if (e.clientX <= 300) {
+      if (e.clientX <= 200) {
         sideBar.classList.add("show");
       } else {
         sideBar.classList.remove("show");
