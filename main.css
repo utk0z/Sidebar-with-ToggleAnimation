@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --text-color: #ccc;
+
+  --trans-02: all 0.2s ease;
+  --trans-03: all 0.3s ease;
+  --trans-05: all 0.5s ease;
+
+  --box-shadow-1: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+  height: 200vh;
+}
+
+.sidebar {
+  position: fixed;
+  height: fit-content;
+  width: 200px;
+  top: 2rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.3rem;
+  box-shadow: var(--box-shadow-1);
+  transition: var(--trans-05);
+}
+
+.sidebar.hidden {
+  left: -300px;
+  transition: var(--trans-05);
+}
+
+.sidebar.hidden.show {
+  left: 1rem;
+}
+
+.sidebar-top {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--sidebar-color);
+  padding: 0.5rem 0;
+}
+
+.sidebar-top h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  cursor: default;
+}
+
+.sidebar-top .toggle {
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--primary-color-light);
+  border-radius: 0.3rem;
+  transition: var(--trans-03);
+}
+
+.sidebar-top .toggle:hover {
+  transform: scale(1.025);
+}
+
+.sidebar-menu {
+  margin: 1rem 0 5rem 0;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu ul li {
+  list-style: none;
+  margin: 1rem 0;
+  transition: var(--trans-05);
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: var(--text-color);
+  text-align: start;
+  transition: var(--trans-02);
+  font-size: 1rem;
+}
+
+.sidebar-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--sidebar-color);
+  padding: 0.5rem 0;
+}
+
+.sidebar-bottom i {
+  margin-right: 1rem;
+  color: var(--text-color);
+}
+
+.sidebar-bottom h2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  cursor: pointer;
+}
